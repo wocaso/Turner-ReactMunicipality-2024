@@ -1,0 +1,12 @@
+#buttonAtender{
+    background-color: rgb(135, 177, 211);
+    box-shadow: 5px 5px 2.5px grey;
+    width: 250px;
+    height: auto;
+    font-weight: 100;
+}
+
+#imgAtender{
+    height: auto;
+    width: 150px;
+}

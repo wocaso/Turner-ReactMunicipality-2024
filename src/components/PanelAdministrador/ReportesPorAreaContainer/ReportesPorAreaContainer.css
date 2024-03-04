@@ -1,0 +1,117 @@
+#ReportesPorAreaContainerContainerSecc1{
+    background-color: #3580c7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: auto;
+}
+
+#ReportesPorAreaContainerContainer{
+border: 1px solid #3580c7;
+border-radius: 10px;
+width: 55vw;
+height: auto;
+margin: auto;
+margin-top: 10vh;
+box-shadow: 5px 5px 2.5px grey;
+}
+
+
+#labelFechaAtendidosContainer{
+    margin-left: 10px;
+}
+
+.labelAtendidosText{
+    color: white;
+}
+
+#ReportesPorAreaContainerContainerSecc2Fechas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#ReportesPorAreaContainerContainerSecc3Secc1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: flex-start;
+    margin-right: 5vw;
+    margin-left: 5vw;
+
+}
+
+#ReportesPorAreaContainerContainerSecc3Secc2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: flex-start;
+    margin-right: 5vw;
+    margin-left: 5vw;
+
+}
+
+#ReportesPorAreaContainerContainerSecc2FechasIndiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+.ReportesPorAreaContainerContainerTextoPequeño{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.ReportesPorAreaContainerContainerTextoMediano{
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#ReportesPorAreaContainerContainerSecc2Secc1{
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+#ReportesPorAreaContainerContainerSecc3{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50vw;
+    margin: auto;
+    margin-left: 8vw;
+    margin-bottom: 3vh;
+}
+
+#ReportesPorAreaContainerContainerSecc3Secc2Text2{
+    margin-right: 20vw;
+}
+
+#ReportesPorAreaContainerContainerSecc3Secc2Text{
+    margin-right: 12vw;
+}
+
+#ReportesPorAreaContainerContainerEspaciadorAzul{
+    height: 2px;
+    width: 50vw;
+    background-color: #3580c7;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border-radius: 20px;
+}
+
+#ReportesPorAreaContainerContainerSecc2Button{
+    background-color: #3580c7;
+    color: white;
+    width: 400px;
+    margin-top: 4vh;
+}
+
+
+.ReportesPorAreaContainerContainerSecc2FechasIndivInput{
+    width: 250px;
+}

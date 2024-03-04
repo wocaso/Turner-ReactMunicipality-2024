@@ -1,0 +1,48 @@
+#PanelNumsFila1{
+    display: flex;
+    flex-direction: row;
+}
+
+#PanelNumsFila2{
+    display: flex;
+    flex-direction: row;
+}
+
+#PanelNumsFila3{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#PanelNumsGrid{
+    
+    margin: auto;
+    
+}
+
+#PanelNumsContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
+#PanelNumsPanelNumerico{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgPanelNums{
+
+   height: auto;
+   width: 1000px;
+   margin: auto;
+   margin-bottom: 30px;
+}
+
+#confirmClearContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

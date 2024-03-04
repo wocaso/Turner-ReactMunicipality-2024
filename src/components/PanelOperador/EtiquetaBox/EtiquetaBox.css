@@ -1,0 +1,38 @@
+#labelTipoBoxContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#EtiquetaTipoBoxContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#labelTipoBox{
+    margin-left: 20px;
+    
+
+}
+
+#labelTipoBoxContainerContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#labelEstadoBox{
+    font-weight: 500;
+}
+
+#labelEstadoBoxActual{
+    font-size: 20px;
+    margin-top: 9px;
+    margin-left: 10px;
+
+}
+
+.textoEtiquetaBox{
+    font-size: 30px;
+}

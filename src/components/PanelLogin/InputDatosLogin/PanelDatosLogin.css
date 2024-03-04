@@ -1,0 +1,14 @@
+#PanelDatosLoginContainer{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    margin: auto;
+}
+#PanelDatosLoginInputUser{
+    text-align: center;
+}
+
+#PanelDatosLoginInputPassword{
+    text-align: center;
+    margin-top: 2vh;
+}

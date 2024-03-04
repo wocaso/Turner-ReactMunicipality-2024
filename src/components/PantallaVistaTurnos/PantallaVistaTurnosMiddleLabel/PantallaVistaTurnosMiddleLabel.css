@@ -1,0 +1,13 @@
+#PantallaVistaTurnosMiddleLabel{
+    display: flex;
+    flex-direction: column;
+}
+#PantallaVistaTurnosMiddleLabelLabel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(255,157,28);
+    color: white;
+    font-style: oblique;
+    font-weight:700;
+}

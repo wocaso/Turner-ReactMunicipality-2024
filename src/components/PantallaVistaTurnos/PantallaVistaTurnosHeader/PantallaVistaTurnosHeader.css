@@ -1,0 +1,28 @@
+#PantallaVistaTurnosHeaderContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 90px;
+    align-items: center;
+
+}
+
+#PantallaVistaTurnosHeaderLogo{
+    height: 80px;
+    width: auto;
+}
+
+#PantallaVistaTurnosHeaderFecha{
+    color: white;
+    font-size: 40px;
+    margin-left: -200px;
+}
+
+#PantallaVistaTurnosHeaderHora{
+    color: white;
+    font-size: 40px;
+    margin-top: 10px;
+
+}
+

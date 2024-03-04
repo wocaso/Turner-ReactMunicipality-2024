@@ -1,0 +1,13 @@
+#PantallaVistaTurnosContainerContainer{
+    display: flex;
+    flex-direction: column;
+}
+#PantallaVistaTurnosHeader{
+    background-color: rgb(255,157,28);
+    height: 11vh;
+    width: auto;
+}
+#PantallaVistaTurnosMiddleBody{
+    height: 81vh;
+    width: auto;
+}

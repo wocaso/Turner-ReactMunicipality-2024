@@ -1,0 +1,9 @@
+.textoTurnosEnCola{
+    font-size: 20px;
+}
+
+#etiquetaTurnosEnColaContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}

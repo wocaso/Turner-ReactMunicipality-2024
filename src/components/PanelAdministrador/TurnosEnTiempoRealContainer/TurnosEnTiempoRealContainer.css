@@ -1,0 +1,30 @@
+#TurnosEnTiempoRealContainerContainer{
+    border: 2px solid #e46c0b;
+    height: auto;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+#TurnosEnTiempoRealContainerContainerSecc1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+}
+
+#TurnosEnTiempoRealContainerContainerSecc2{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#LabelurnosEnTiempoRealContainerContainer{
+    background-color: #ee7e22;
+    height: 10vh;
+    color:white;
+    text-align: start;
+    padding: 2vh;
+    
+}

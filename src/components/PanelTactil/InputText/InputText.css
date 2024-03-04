@@ -1,0 +1,20 @@
+#inputTextTextContainer{
+    background-color: rgb(233, 232, 231);
+    width: 850px;
+    height: 120px;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    border: 2px solid #8a8a8a;
+
+
+    
+}
+
+#inputTextTextText{
+    font-size: 60px;
+    
+}

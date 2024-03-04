@@ -1,0 +1,21 @@
+#dniLabelTextContainer{
+    background-color: rgb(233, 232, 231);
+    width: 30vw;
+    height: 120px;
+    margin: auto;
+    margin-top: 3vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+#dniLabelTextText{
+    font-size: 50px;
+    
+}

@@ -1,0 +1,42 @@
+#PanelOperadorContainerContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#PanelOperadorContainerContainerSecc1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 4vh;
+}
+#PanelOperadorContainerContainerSecc2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 2vw;
+    margin-right: 7vw;
+    margin-top: 1vh;
+}
+#PanelOperadorContainerContainerSecc3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 14vw;
+    margin-top: 4vh;
+    margin-bottom: -13vh;
+}
+
+#buttonsLlamarAtender{
+    display: flex;
+    flex-direction: row;
+    margin-right: 80px;
+}
+#buttonsLlamarAtenderSpacer1{
+    width: 30px;
+}
+#buttonsLlamarAtenderSpacer{
+    width: 20vw;
+}

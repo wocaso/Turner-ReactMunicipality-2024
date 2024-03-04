@@ -1,0 +1,17 @@
+#TurnosCanceladosColaContainer{
+    display: flex;
+    flex-direction: column;
+    margin-right: -5px;
+}
+
+
+#TurnosCanceladosColaButtons{
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+#TurnosCanceladosColaSpacer{
+    width: 10px;
+}

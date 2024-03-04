@@ -1,0 +1,13 @@
+.BtnButtonSeleccionArea{
+    background-color: #FF9D1C;
+    box-shadow: 5px 5px 2.5px grey;
+    height: 120px;
+    width: 270px;
+    border-radius: 20px;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+

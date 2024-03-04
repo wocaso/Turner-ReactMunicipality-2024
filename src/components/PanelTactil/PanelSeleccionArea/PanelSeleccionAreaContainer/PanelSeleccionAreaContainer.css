@@ -1,0 +1,19 @@
+
+
+#PanelSeleccionAreaContainerContainer{
+    display: flex;
+    flex-direction: row;
+    margin-left: 34vw;
+    margin-top: -3vh;
+
+}
+
+#PanelSeleccionAreaSpacer{
+    width: 20px;
+}
+
+#PanelSeleccionAreaContainerContainerContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+}

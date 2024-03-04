@@ -1,0 +1,15 @@
+.textoEtiquetaDatosDeTurno{
+    font-size: 20px;
+}
+
+
+.EtiquetaDatosDeTurnoContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+#EtiquetaDatosDeTurnoContainerContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -15px;
+}

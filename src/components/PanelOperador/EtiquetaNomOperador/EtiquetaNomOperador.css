@@ -1,0 +1,12 @@
+#labelNombreOperador{
+    font-weight: 700;
+}
+
+
+#labelOperador{
+    font-weight: 100;
+    font-size: 25px;
+}
+#etiquetaNombreOperadorContainer{
+    margin-left: -270px;
+}
