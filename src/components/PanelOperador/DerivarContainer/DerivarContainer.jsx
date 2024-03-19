@@ -8,14 +8,14 @@ function DerivarContainer(props) {
   return (
     <div id="DerivarContainerContainer">
       <div id="derivarCajaContainer">
-      <ButtonDerivarCaja imgButton2="/Assets/FlechaDerecha.png" imgButton="/Assets/cajaRegistradora.png"/>
-      <ButtonDerivarCaja imgButton2="/Assets/sillaRuedas.png" imgButton="/Assets/cajaRegistradora.png"/>
+      <ButtonDerivarCaja disabledBoolean={props.disabledBoolean} imgButton2="/Assets/FlechaDerecha.png" imgButton="/Assets/cajaRegistradora.png"/>
+      <ButtonDerivarCaja disabledBoolean={props.disabledBoolean} imgButton2="/Assets/sillaRuedas.png" imgButton="/Assets/cajaRegistradora.png"/>
       </div>
       
       <div id="DerivarContainerBoxes">
       {props.items.map((item)=>{
             i++;
-            return(<ButtonDerivar key={i} textButton={item}/>)
+            return(<ButtonDerivar disabledBoolean={props.disabledBoolean} key={i} textButton={item}/>)
             
         })}
       </div>

@@ -1,73 +1,87 @@
-import React, { useContext } from 'react'
-import ButtonSeleccionArea from '../ButtonSeleccionArea/ButtonSeleccionArea'
-import ButtonAtrasSeleccionArea from '../ButtosAtrasSeleccionArea/ButtonAtrasSeleccionArea';
-import DniLabel from '../DniLabel/DniLabel';
-import { contextDni } from '../../../../context/dniContext/dniContex';
-import "./PanelSeleccionAreaContainer.css"
+import React, { useContext, useEffect, useState } from "react";
+import ButtonSeleccionArea from "../ButtonSeleccionArea/ButtonSeleccionArea";
+import ButtonAtrasSeleccionArea from "../ButtosAtrasSeleccionArea/ButtonAtrasSeleccionArea";
+import DniLabel from "../DniLabel/DniLabel";
+import { contextDni } from "../../../../context/dniContext/dniContex";
+import "./PanelSeleccionAreaContainer.css";
+import axios from "axios";
 
 function PanelSeleccionAreaContainer() {
-const context = useContext(contextDni)
-    let arrayMedio = null;
-let boxes = ["Agua","Catastro", "Catastro 2", "Intendencia","Jueces","Compras","Judiciales"];
-let array1 = [];
-let array2 = [];
+  const context = useContext(contextDni);
+  const [data, setData] = useState(null);
+  const [columna1, setColumna1] = useState([]);
+  const [columna2, setColumna2] = useState([]);
+  const [columnaMedia, setColumnaMedia] = useState(null);
 
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/tipoDeTurno", { withCredentials: true })
+      .then((response) => {
+        if (response.data) {
+          const arrayNombreArea = response.data.map((obj) => obj.nombreTipoDeTurno);
+          setData(arrayNombreArea);
+        }
+      })
+      .catch((error) => {
+        console.error("Error al obtener datos del servidor:", error);
+      });
+  }, []);
 
-let i = 0;
-let dobles = 0;
+  useEffect(() => {
+    if (data) {
+      const newArray1 = [];
+      const newArray2 = [];
+      let i = 0;
 
-boxes.map((item)=>{
-    
-    
-    if(dobles === 0){
-        array1.push(item)
-        dobles++;
-    }else{
-        array2.push(item);
-        dobles--;
+      data.forEach((item) => {
+        i++;
+        if (i % 2 === 1) {
+          newArray1.push(item);
+        } else {
+          newArray2.push(item);
+        }
+      });
+
+      setColumna1(newArray1);
+      setColumna2(newArray2);
+
+      if (newArray1.length > newArray2.length) {
+        setColumnaMedia(newArray1.pop());
+      } else {
+        setColumnaMedia(null);
+      }
     }
-    return(array1,array2)
-})
-
-if(array1.length > array2.length){
-    arrayMedio = array1.pop();
-}
+  }, [data]);
 
   return (
-<div id="PanelSeleccionAreaContainerContainerContainer">
-<ButtonAtrasSeleccionArea/>
-<DniLabel innerText={context.numDni}/>
-<div id="PanelSeleccionAreaContainerContainer">
+    <div id="PanelSeleccionAreaContainerContainerContainer">
 
-<div id="PanelSeleccionAreaColumna1">
-{array1.map((item)=>{
-    i++;
+      <div id="datosPanelSeleccionAreaContainer">
+      <ButtonAtrasSeleccionArea />
+      <DniLabel innerText={context.numDni} />
+                
+                </div>
+      <div id="PanelSeleccionAreaContainerContainer">
+        <div id="PanelSeleccionAreaColumna1">
 
-    return(<ButtonSeleccionArea key={i} buttonText={item}/>)
-
-
-        
-})}
-</div>
-<div id="PanelSeleccionAreaSpacer">
-
-</div>
-<div id="PanelSeleccionAreaColumna2">
-{array2.map((item)=>{
-    i++;
-    return(<ButtonSeleccionArea key={i} buttonText={item}/>)
-    
-})}
-</div>
-</div>
-{arrayMedio === null ? null :<div id="PanelSeleccionAreaColumnaMedia">
-<ButtonSeleccionArea key={99} buttonText={arrayMedio}/>
-</div>}
-
+          {columna1.map((item, index) => (
+            <ButtonSeleccionArea key={index} buttonText={item} />
+          ))}
+        </div>
+        <div id="PanelSeleccionAreaSpacer"></div>
+        <div id="PanelSeleccionAreaColumna2">
+          {columna2.map((item, index) => (
+            <ButtonSeleccionArea key={index} buttonText={item} />
+          ))}
+        </div>
+      </div>
+      {columnaMedia && (
+        <div id="PanelSeleccionAreaColumnaMedia">
+          <ButtonSeleccionArea key={999} buttonText={columnaMedia} />
+        </div>
+      )}
     </div>
-    
-   
-  )
+  );
 }
 
-export default PanelSeleccionAreaContainer
+export default PanelSeleccionAreaContainer;

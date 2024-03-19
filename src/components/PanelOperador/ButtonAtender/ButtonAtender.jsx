@@ -1,10 +1,10 @@
 import React from 'react'
 import "./ButtonAtender.css"
 
-function ButtonAtender() {
+function ButtonAtender(props) {
   return (
     <div>
-        <button className='btn' id="buttonAtender">
+        <button disabled={props.buttonDisabled} className='btn' id="buttonAtender">
             <img src="/Assets/LogoAuriculares.png" id="imgAtender" alt="" />
         </button>
     </div>

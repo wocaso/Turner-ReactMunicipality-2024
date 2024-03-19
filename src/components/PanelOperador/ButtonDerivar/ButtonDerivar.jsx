@@ -4,7 +4,7 @@ import "./ButtonDerivar.css"
 function ButtonDerivar(props) {
   return (
     <div>
-        <button className='btn' id="btnDerivar">{props.textButton}</button>
+        <button disabled={props.disabledBoolean} className='btn' id="btnDerivar">{props.textButton}</button>
     </div>
   )
 }

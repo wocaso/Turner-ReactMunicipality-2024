@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 import PantallaPanelTactil from "./components/PanelTactil/PantallaPanelTactil/PantallaPanelTactil";
 import PanelOperadorContainer from "./components/PanelOperador/PanelOperadorContainer/PanelOperadorContainer";
@@ -9,7 +9,7 @@ import PanelLoginContainer from "./components/PanelLogin/PanelLoginContainer/Pan
 import PanelAdministradorContainer from "./components/PanelAdministrador/PanelAdministradorContainer/PanelAdministradorContainer";
 import PantallaVistaTurnosContainer from "./components/PantallaVistaTurnos/PantallaVistaTurnosContainer/PantallaVistaTurnosContainer";
 import PanelSeleccionBoxContainer from "./components/PanelSeleccionBox/PanelSeleccionBoxContainer/PanelSeleccionBoxContainer";
-
+import Redireccionador from "./components/Redireccionador/Redireccionador";
 import NumDniContextProvider from "./context/dniContext/dniContex";
 import UserSessionContextProvider from "./context/userContext";
 
@@ -20,6 +20,10 @@ function App() {
         <UserSessionContextProvider>
           <BrowserRouter>
             <Routes>
+              <Route
+                path="/"
+                element={<Redireccionador direccionRed={"/panelLogin"} />}
+              />
               <Route path="/panelTactil" element={<PantallaPanelTactil />} />
               <Route
                 path="/panelOperador/:idBox"
@@ -32,8 +36,10 @@ function App() {
               />
 
               <Route path="/panelLogin" element={<PanelLoginContainer />} />
-              <Route path="/PanelSeleccionBoxContainer/:area" element={<PanelSeleccionBoxContainer
-               />} />
+              <Route
+                path="/PanelSeleccionBoxContainer/:area"
+                element={<PanelSeleccionBoxContainer />}
+              />
 
               <Route
                 path="/panelAdministrador/:section"
