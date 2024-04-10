@@ -10,9 +10,41 @@ import ButtonAtender from "../ButtonAtender/ButtonAtender";
 import EtiquetaDatosDeTurno from "../EtiquetaDatosDeTurno/EtiquetaDatosDeTurno";
 import TurnosCanceladosCola from "../TurnosCanceladosCola/TurnosCanceladosCola";
 import axios from "axios";
+
+import socketIOClient from 'socket.io-client';
+const ENDPOINT = 'http://localhost:8080';
+
 import { useNavigate } from "react-router-dom";
 //---------------------------------------------------------------------------------------------------------------------------------------------------//
+//socketio ...............................
 function PanelOperadorContainer() {
+  const [elementAdded, setElementAdded] = useState(false);
+  const [elementCount, setElementCount] = useState(0);
+  useEffect(() => {
+    const socket = socketIOClient(ENDPOINT);
+
+    socket.on('element-added', cantidadElementos => {
+      setElementCount(cantidadElementos);
+      setElementAdded(true);
+    });
+
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
+  // const handleAddElement = async () => {
+  //   try {
+  //     await axios.get('/api/add-element');
+  //     // No necesitas hacer nada específico aquí, la actualización del componente
+  //     // se manejará automáticamente a través de la conexión WebSocket
+  //   } catch (error) {
+  //     console.error('Error al agregar el elemento:', error);
+  //   }
+  // };
+  //socketio fin ...............................
+
+
+
   function abrirBox(idRegistro) {
     return axios.put(
       "http://localhost:8080/api/boxes/boxInd/open/" + idRegistro,
@@ -142,6 +174,7 @@ function PanelOperadorContainer() {
       <div id="PanelOperadorContainerContainerSecc3">
         <EtiquetaDatosDeTurno dni="40107380" numTurno="24" />
         <TurnosCanceladosCola />
+        <h1>turnos:{cantidadElementos}</h1>
       </div>
     </div>
   );

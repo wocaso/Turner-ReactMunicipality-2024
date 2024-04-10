@@ -56,6 +56,7 @@ function PanelSeleccionAreaContainer() {
   return (
     <div id="PanelSeleccionAreaContainerContainerContainer">
 
+
       <div id="datosPanelSeleccionAreaContainer">
       <ButtonAtrasSeleccionArea />
       <DniLabel innerText={context.numDni} />

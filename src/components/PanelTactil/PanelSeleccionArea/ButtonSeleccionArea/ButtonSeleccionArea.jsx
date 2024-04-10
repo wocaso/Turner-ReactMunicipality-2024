@@ -2,6 +2,7 @@ import {React, useContext} from 'react'
 import { contextDni } from '../../../../context/dniContext/dniContex'
 import Swal from 'sweetalert2'
 import "./ButtonSeleccionArea.css"
+import axios from "axios";
 
 function ButtonSeleccionArea(props) {
 
@@ -10,23 +11,30 @@ function ButtonSeleccionArea(props) {
 
 
   function showSweetAlert(tittle,text){
-    //Enviar Datos una vez conectado el end.
-    console.log({
-      Dni: context.numDni,
-      Area: props.buttonText
-    })
-    Swal.fire({
-      icon: 'success',
-      title: tittle,
-      text: text,
-      timer: 2000,
-      showConfirmButton: false,
-      willClose: () => {
+      let Dni = context.numDni
+      let Area = props.buttonText
 
-        setnumeroDni(null);
-        window.location.replace('/panelTactil')
-      }
+    axios
+    .post("http://localhost:8080/api/Agregarturno/"+Dni+"/"+Area+"/", { withCredentials: true })
+    .then((response) => {
+      Swal.fire({
+        icon: 'success',
+        title: tittle,
+        text: text,
+        timer: 2000,
+        showConfirmButton: false,
+        willClose: () => {
+  
+          setnumeroDni(null);
+          window.location.replace('/panelTactil')
+        }
+      })
+
     })
+    .catch((error) => {
+      console.error("Error al obtener datos del servidor:", error);
+    });
+
   }
 
   return (
